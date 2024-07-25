@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cold Storage</title>
+	<meta charset="utf-8">
+	<link href="../css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+	<a href="Index.html"><img src="../images/logo.jpg" class="logo" align="left" title="Cold Storage" alt="Cold Storage"/></a>
+	<a href="login.html"><img src="../images/loginb.png" class="login" align="right"/></a>
+	<br/><br/><br/><nav class="navbar" style="margin-bottom:-17px;">
+		<div class="container-fluid">
+		<div class="nav">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="sidenav" class="collapse navbar-collapse" id="myNavbar">
+			<a href="Index.html">Home</a>
+			<button class="dropdown-btn">Products
+			</button>
+			<div class="dropdown-container">
+				<a href="fruitsvegetables.html">Fruits & Vegetables</a>
+				<a href="meatseafood.html">Meat & Seafood</a>
+				<a href="bakerycerealspreads.html">Bakery, Cereal & Spreads</a>
+				<a href="dairychilledfrozen.html">Dairy, Chilled & Frozen</a>
+			</div>
+			<button class="dropdown-btn" id="current">Services
+			</button>
+			<div class="dropdown-container">
+					<a href="order.html">Order</a>
+					<a href="application.html">Application</a>
+					<a href="enquires-feedback.html" class="current">Enquiries & Feedback</a>
+			</div>
+			<a href="contactus.html">Contact us</a>
+		</div>
+		</div>
+		</nav>
+		<div class="pill-nav">
+		  <a href="order.html">Order</a>
+		  <a href="application.html">Application</a>
+		  <a class="current" href="enquires-feedback.html">Enquiries & Feedback</a>
+		</div>
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+	<div class="main">
+		<div class="alert alert-success" align="center">
+				Your Enquiry/Feedback has been submitted.&nbsp;<a href="Index.html">Press here to go back to home</a>
+		</div>
+	</div>
+</body>
+</html>

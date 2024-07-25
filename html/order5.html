@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cold Storage</title>
+	<meta charset="utf-8">
+	<link href="../css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+	<a href="Index1.html"><img src="../images/logo.jpg" class="logo" align="left" title="Cold Storage" alt="Cold Storage"/></a>
+	<a href="Index.html"><img src="../images/person.png" class="profile" align="right"/></a>
+	<br/><br/><br/><nav class="navbar" style="margin-bottom:-17px;">
+		<div class="container-fluid">
+		<div class="nav">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="sidenav" class="collapse navbar-collapse" id="myNavbar">
+			<a href="Index1.html">Home</a>
+			<button class="dropdown-btn">Products
+			</button>
+			<div class="dropdown-container">
+				<a href="fruitsvegetables1.html">Fruits & Vegetables</a>
+				<a href="meatseafood1.html">Meat & Seafood</a>
+				<a href="bakerycerealspreads1.html">Bakery, Cereal & Spreads</a>
+				<a href="dairychilledfrozen1.html">Dairy, Chilled & Frozen</a>
+			</div>
+			<button class="dropdown-btn" id="current">Services
+			</button>
+			<div class="dropdown-container">
+					<a href="order4.html" class="current">Order</a>
+					<a href="application2.html">Application</a>
+					<a href="enquires-feedback2.html">Enquiries & Feedback</a>
+			</div>
+			<a href="contactus1.html">Contact us</a>
+		</div>
+		</div>
+		</nav>
+		<div class="pill-nav">
+		  <a class="current" href="order4.html">Order</a>
+		  <a href="application2.html">Application</a>
+		  <a href="enquires-feedback2.html">Enquiries & Feedback</a>
+		</div>
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+	<div class="main">
+	<div class="container">
+	<ul class="breadcrumb">
+		<li class="success">Cart</li>
+		<li class="doing"><span class="doing">Payment</span></li>
+		<li>Billing and Shipping Address</li>
+		<li>Completed</li>
+	</ul>
+	</div>
+		<div class="container">
+		<form action="order6.html" method="post">
+            <h1 class="regord">Payment</h1>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            </div>
+            <br/><label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" autocomplete="off" placeholder="John Tan" pattern="[A-Za-z]+"/>
+            <label for="ccnum">card number</label>
+            <input type="text" id="ccnum" name="cardnumber" autocomplete="off" inputmode="numeric" maxlength="19" required="required" placeholder="1111 2222 3333 4444" pattern="[0-9]+"/>
+			<label for="expyear">Exp Year</label>
+			<input type="month" id="expyear" name="expyear" autocomplete="off" inputmode="numeric" required="required"/>
+			<label for="cvv">CVV/CVC</label>
+			<input type="text" id="cvv" name="cvv" autocomplete="off" inputmode="numeric" maxlength="3" required="required" placeholder="352" pattern="[0-9]+"/>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"/> Shipping address same as billing
+        </label>
+		<input type="submit" value="Next" class="btn"/>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cold Storage</title>
+	<meta charset="utf-8">
+	<link href="../css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+	h1{
+		font-weight:bold;
+		text-align:center; 
+		padding-left:160px;
+	}
+	h2{
+		font-weight:bold;
+		text-align:center;
+		padding-left:160px;
+	}
+	h3{
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body class="body">
+	<a href="Index.html"><img src="../images/logo.jpg" class="logo" align="left" title="Cold Storage" alt="Cold Storage"/></a>
+	<a href="login.html"><img src="../images/loginb.png" class="login" align="right"/></a>
+	<br/><br/><br/><nav class="navbar">
+		<div class="container-fluid">
+		<div class="nav">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="sidenav" class="collapse navbar-collapse" id="myNavbar">
+			<a href="Index.html">Home</a>
+			<button class="dropdown-btn" id="current">Products
+			</button>
+			<div class="dropdown-container">
+					<a href="fruitsvegetables.html" class="current">Fruits & Vegetables</a>
+					<a href="meatseafood.html">Meat & Seafood</a>
+					<a href="bakerycerealspreads.html">Bakery, Cereal & Spreads</a>
+					<a href="dairychilledfrozen.html">Dairy, Chilled & Frozen</a>
+			</div>
+			<button class="dropdown-btn">Services
+			</button>
+			<div class="dropdown-container">
+					<a href="order.html">Order</a>
+					<a href="application.html">Application</a>
+					<a href="enquires-feedback.html">Enquiries & Feedback</a>
+			</div>
+			<a href="contactus.html">Contact us</a>
+		</div>
+		</div>
+		</nav>
+	<ul class="nav nav-pills">
+		<li class="active"><a data-toggle="pill" href="#fruits">Fresh Fruits</a></li>
+		<li><a data-toggle="pill" href="#vegetables">Fresh Vegetables</a></li>
+		<li><a data-toggle="pill" href="#salads">Salads</a></li>
+		<li><a data-toggle="pill" href="#dried">Dried Fruits</a></li>
+		<li><a data-toggle="pill" href="#chilled">Chilled/Canned</a></li>
+	</ul>
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+<div class="main">
+	<div class="tab-content">
+    <div id="fruits" class="tab-pane fade in active">
+		<div class="card">
+		<div class="image">
+		   <img src="../images/apple.jpg">
+		</div>
+		<div class="title">
+		 <h3>Fuji Apple</h3>
+		</div>
+		<div class="des">
+		 <p>China</p>
+		 <p>Price: $1.00</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange1"/>
+		 <p>Value: <span id="demo1"></span></p>
+		<script>
+		var slider1 = document.getElementById("myRange1");
+		var output1= document.getElementById("demo1");
+		output1.innerHTML = slider1.value;
+
+		slider1.oninput = function() {
+		  output1.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/grape.jpg">
+		</div>
+		<div class="title">
+		 <h3>Red Seedless Grape</h3>
+		</div>
+		<div class="des">
+		 <br/>
+		 <p>Price: $7.15/650g</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange2"/>
+		 <p>Value: <span id="demo2"></span></p>
+		<script>
+		var slider2 = document.getElementById("myRange2");
+		var output2 = document.getElementById("demo2");
+		output2.innerHTML = slider2.value;
+
+		slider2.oninput = function() {
+		  output2.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/redwatermelon.jpg">
+		</div>
+		<div class="title">
+		 <h3>Red Watermelon</h3>
+		</div>
+		<div class="des">
+		 <p>Malaysia</p>
+		 <p>Price: $8.95</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange3"/>
+		 <p>Value: <span id="demo3"></span></p>
+		<script>
+		var slider3 = document.getElementById("myRange3");
+		var output3 = document.getElementById("demo3");
+		output3.innerHTML = slider3.value;
+
+		slider3.oninput = function() {
+		  output3.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+    </div>
+    <div id="vegetables" class="tab-pane fade">
+		<div class="card">
+		<div class="image">
+		   <img src="../images/broccoli.jpg">
+		</div>
+		<div class="title">
+		 <h3>Broccoli</h3>
+		</div>
+		<div class="des">
+		 <p>Australia</p>
+		 <p>Price: $6.25/500g</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange4"/>
+		 <p>Value: <span id="demo4"></span></p>
+		<script>
+		var slider4 = document.getElementById("myRange4");
+		var output4 = document.getElementById("demo4");
+		output4.innerHTML = slider4.value;
+
+		slider4.oninput = function() {
+		  output4.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/sweettato.jpg">
+		</div>
+		<div class="title">
+		 <h3>Sweet Potato Honey</h3>
+		</div>
+		<div class="des">
+		 <br/>
+		 <p>Price: $3.40/750g</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange5"/>
+		 <p>Value: <span id="demo5"></span></p>
+		<script>
+		var slider5 = document.getElementById("myRange5");
+		var output5 = document.getElementById("demo5");
+		output5.innerHTML = slider5.value;
+
+		slider5.oninput = function() {
+		  output5.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/whiteasp.jpg">
+		</div>
+		<div class="title">
+		 <h3>White Asparagus</h3>
+		</div>
+		<div class="des">
+		 <br/>
+		 <p>Price: $16.00/500g</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange6"/>
+		 <p>Value: <span id="demo6"></span></p>
+		<script>
+		var slider6 = document.getElementById("myRange6");
+		var output6 = document.getElementById("demo6");
+		output6.innerHTML = slider6.value;
+
+		slider6.oninput = function() {
+		  output6.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+	</div>
+    <div id="salads" class="tab-pane fade">
+		<div class="card">
+		<div class="image">
+		   <img src="../images/kinkykale.jpg">
+		</div>
+		<div class="title">
+		 <h3>Kinky Kale 150g</h3>
+		</div>
+		<div class="des">
+		 <p>Sustenir</p>
+		 <p>Price: $7.00</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange7"/>
+		 <p>Value: <span id="demo7"></span></p>
+		<script>
+		var slider7 = document.getElementById("myRange7");
+		var output7= document.getElementById("demo7");
+		output7.innerHTML = slider7.value;
+
+		slider7.oninput = function() {
+		  output7.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/wildrockets.jpg">
+		</div>
+		<div class="title">
+		 <h3>Wild Rocket 80g</h3>
+		</div>
+		<div class="des">
+		 <p>Sunview<p>
+		 <p>Price: $5.40</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange8"/>
+		 <p>Value: <span id="demo8"></span></p>
+		<script>
+		var slider8 = document.getElementById("myRange8");
+		var output8 = document.getElementById("demo8");
+		output8.innerHTML = slider8.value;
+
+		slider8.oninput = function() {
+		  output8.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/babyspinch.jpg">
+		</div>
+		<div class="title">
+		 <h3>Baby Spinch Italy 125g </h3>
+		</div>
+		<div class="des">
+		 <p>Vivaldi</p>
+		 <p>Price: $5.95</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange9"/>
+		 <p>Value: <span id="demo9"></span></p>
+		<script>
+		var slider9 = document.getElementById("myRange9");
+		var output9 = document.getElementById("demo9");
+		output9.innerHTML = slider9.value;
+
+		slider9.oninput = function() {
+		  output9.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+    </div>
+    <div id="dried" class="tab-pane fade">
+		<div class="card">
+		<div class="image">
+		   <img src="../images/plum.jpg">
+		</div>
+		<div class="title">
+		 <h3>Seedless Dried Plum</h3>
+		</div>
+		<div class="des">
+		 <p>Sungift</p>
+		 <p>Price: $1.30</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange10"/>
+		 <p>Value: <span id="demo10"></span></p>
+		<script>
+		var slider10 = document.getElementById("myRange10");
+		var output10 = document.getElementById("demo10");
+		output10.innerHTML = slider10.value;
+
+		slider10.oninput = function() {
+		  output10.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/raisins.jpg">
+		</div>
+		<div class="title">
+		 <h3>Organic Red Raisins</h3>
+		</div>
+		<div class="des">
+		 <p>Sunview</p>
+		 <p>Price: $7.80</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange11"/>
+		 <p>Value: <span id="demo11"></span></p>
+		<script>
+		var slider11 = document.getElementById("myRange11");
+		var output11 = document.getElementById("demo11");
+		output11.innerHTML = slider11.value;
+
+		slider11.oninput = function() {
+		  output11.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/cherries.jpg">
+		</div>
+		<div class="title">
+		 <h3>Dried Cherries</h3>
+		</div>
+		<div class="des">
+		 <p>Cold Storage</p>
+		 <p>Price: $6.45</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange12"/>
+		 <p>Value: <span id="demo12"></span></p>
+		<script>
+		var slider12 = document.getElementById("myRange12");
+		var output12 = document.getElementById("demo12");
+		output12.innerHTML = slider12.value;
+
+		slider12.oninput = function() {
+		  output12.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+    </div>
+	<div id="chilled" class="tab-pane fade">
+      <div class="card">
+		<div class="image">
+		   <img src="../images/palmheart.jpg">
+		</div>
+		<div class="title">
+		 <h3>Palm Heart</h3>
+		</div>
+		<div class="des">
+		 <p>CSN</p>
+		 <p>Price: $4.80</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange13"/>
+		 <p>Value: <span id="demo13"></span></p>
+		<script>
+		var slider13 = document.getElementById("myRange13");
+		var output13 = document.getElementById("demo13");
+		output13.innerHTML = slider13.value;
+
+		slider13.oninput = function() {
+		  output13.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/strawberry.jpg">
+		</div>
+		<div class="title">
+		 <h3>Strawberries 450g</h3>
+		</div>
+		<div class="des">
+		 <p>Emborg</p>
+		 <p>Price: $7.50</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange14"/>
+		 <p>Value: <span id="demo14"></span></p>
+		<script>
+		var slider14 = document.getElementById("myRange14");
+		var output14 = document.getElementById("demo14");
+		output14.innerHTML = slider14.value;
+
+		slider14.oninput = function() {
+		  output14.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+		<div class="card">
+		<div class="image">
+		   <img src="../images/chestnuts.jpg">
+		</div>
+		<div class="title">
+		 <h3>Chestnuts 150g</h3>
+		</div>
+		<div class="des">
+		 <p>Casino</p>
+		 <p>Price: $16.90</p>
+		  <input type="range" min="1" max="100" value="0" class="slider" id="myRange15"/>
+		 <p>Value: <span id="demo15"></span></p>
+		<script>
+		var slider15 = document.getElementById("myRange15");
+		var output15 = document.getElementById("demo15");
+		output15.innerHTML = slider15.value;
+
+		slider15.oninput = function() {
+		  output15.innerHTML = this.value;
+		}
+		</script>
+		<button class="cart">Add to Cart</button>
+		</div>
+		</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

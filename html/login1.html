@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cold Storage</title>
+	<meta charset="utf-8">
+	<link href="../css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+	<a href="Index1.html"><img src="../images/logo.jpg" class="logo" align="left" title="Cold Storage" alt="Cold Storage"/></a>
+	<a href="Index.html"><img src="../images/person.png" class="profile" align="right"/></a>
+	<br/><br/><br/><nav class="navbar">
+		<div class="container-fluid">
+		<div class="nav">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		</button>
+		</div>
+		<div class="sidenav" class="collapse navbar-collapse" id="myNavbar">
+			<a href="Index1.html">Home</a>
+			<button class="dropdown-btn">Products
+			</button>
+			<div class="dropdown-container">
+					<a href="fruitsvegetables1.html">Fruits & Vegetables</a>
+					<a href="meatseafood1.html">Meat & Seafood</a>
+					<a href="bakerycerealspreads1.html">Bakery, Cereal & Spreads</a>
+					<a href="dairychilledfrozen1.html">Dairy, Chilled & Frozen</a>
+			</div>
+			<button class="dropdown-btn">Services
+			</button>
+			<div class="dropdown-container">
+					<a href="order4.html">Order</a>
+					<a href="application2.html">Application</a>
+					<a href="enquires-feedback2.html">Enquiries & Feedback</a>
+			</div>
+			<a href="contactus1.html">Contact us</a>
+		</div>
+		</div>
+		</nav>
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+	<div class="main">
+			<div class="alert alert-success" align="center">
+				You've login successfully.&nbsp;<a href="Index1.html">Press here to go back to home</a>
+			</div>
+	</div>
+</body>
+</html>

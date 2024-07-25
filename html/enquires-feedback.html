@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cold Storage</title>
+	<meta charset="utf-8">
+	<link href="../css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+	<a href="Index.html"><img src="../images/logo.jpg" class="logo" align="left" title="Cold Storage" alt="Cold Storage"/></a>
+	<a href="login.html"><img src="../images/loginb.png" class="login" align="right"/></a>
+	<br/><br/><br/><nav class="navbar" style="margin-bottom:-17px;">
+		<div class="container-fluid">
+		<div class="nav">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="sidenav" class="collapse navbar-collapse" id="myNavbar">
+			<a href="Index.html">Home</a>
+			<button class="dropdown-btn">Products
+			</button>
+			<div class="dropdown-container">
+				<a href="fruitsvegetables.html">Fruits & Vegetables</a>
+				<a href="meatseafood.html">Meat & Seafood</a>
+				<a href="bakerycerealspreads.html">Bakery, Cereal & Spreads</a>
+				<a href="dairychilledfrozen.html">Dairy, Chilled & Frozen</a>
+			</div>
+			<button class="dropdown-btn" id="current">Services
+			</button>
+			<div class="dropdown-container">
+					<a href="order.html">Order</a>
+					<a href="application.html">Application</a>
+					<a href="enquires-feedback.html" class="current">Enquiries & Feedback</a>
+			</div>
+			<a href="contactus.html">Contact us</a>
+		</div>
+		</div>
+		</nav>
+		<div class="pill-nav">
+		  <a href="order.html">Order</a>
+		  <a href="application.html">Application</a>
+		  <a class="current" href="enquires-feedback.html">Enquiries & Feedback</a>
+		</div>
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+	<div class="main">
+		<div class="container">
+			<form action="enquires-feedback1.html" method="post">
+				<p class="name"><label for="name">Name</label></p>
+				<input type="text" id="name" name="name" placeholder="Your name.." autocomplete="off" required="required" pattern="[A-Za-z]+"/>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="E-mail" autocomplete="off" required="required"/>
+				<label for="subject">Subject</label>
+				<input type="text" id="subject" name="subject" autocomplete="off" placeholder="Subject"/>
+				<label for="enquires&feedback">Enquiries or Feedback</label>
+				<textarea id="enquires&feedback" name="Enquires&Feedback" autocomplete="off" placeholder="Do you have any Enquiries or Feedback?" required="required" style="height:200px"></textarea>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<div class="container">
+			<h2>Alternatively, visit the social media and leave a comment. Our staff will reply to your comments.</h2>
+			<br/><a href="https://www.instagram.com/coldstoragesg/" target="_blank" class="fa fa-instagram"></a>
+			<a href="https://www.youtube.com/channel/UCSjKnwdfRFumraG7tIp7Vpw" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://www.facebook.com/sg.coldstorage" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://t.me/coldstoragesg" target="_blank" class="fa fa-telegram"></a>
+		</div>
+		<div class="container">
+			<h2>Alternatively, visit our store to leave an enquiry or feedback and we will get back to you through email.</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63821.55916942767!2d103.75007745820311!3d1.2640112000000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1be2677c3765%3A0x2e9c304246073c03!2sCold%20Storage%20HarbourFront%20Centre!5e0!3m2!1sen!2ssg!4v1658224302756!5m2!1sen!2ssg" width="600em" height="450em" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+</body>
+</html>

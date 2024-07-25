@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cold Storage</title>
+	<meta charset="utf-8">
+	<link href="../css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+	<a href="Index.html"><img src="../images/logo.jpg" class="logo" align="left" title="Cold Storage" alt="Cold Storage"/></a>
+	<a href="login.html"><img src="../images/loginb.png" class="login" align="right"/></a>
+	<br/><br/><br/><nav class="navbar">
+		<div class="container-fluid">
+		<div class="nav">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="sidenav" class="collapse navbar-collapse" id="myNavbar">
+			<a href="Index.html" class="current">Home</a>
+			<button class="dropdown-btn">Products
+			</button>
+			<div class="dropdown-container">
+					<a href="fruitsvegetables.html">Fruits & Vegetables</a>
+					<a href="meatseafood.html">Meat & Seafood</a>
+					<a href="bakerycerealspreads.html">Bakery, Cereal & Spreads</a>
+					<a href="dairychilledfrozen.html">Dairy, Chilled & Frozen</a>
+			</div>
+			<button class="dropdown-btn">Services
+			</button>
+			<div class="dropdown-container">
+					<a href="order.html">Order</a>
+					<a href="application.html">Application</a>
+					<a href="enquires-feedback.html">Enquiries & Feedback</a>
+			</div>
+			<a href="contactus.html">Contact us</a>
+		</div>
+		</div>
+		</nav>
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+<div class="main">
+	<div align="center">
+	<video controls="controls">
+		<source src="../video/Video.mkv" type="video/mp4">
+		<a href="Video.mp4">Download the video</a>
+	</video>
+	</div>
+	<div class="container1" align="center">
+  <h2>Offers and Promotions</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../images/Fruits.jpg" alt="Fruits & Vegetables" width="655px" height="600px">
+      </div>
+      <div class="item">
+        <img src="../images/Meat.jpg" alt="Meat & Seafood" width="650px" height="650">
+      </div>
+      <div class="item">
+        <img src="../images/Bread.jpg" alt="Bakery, Cereal & Spreads" width="875px" height="650px">
+      </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div></div>
+</div>
+<div class="more" align="center">
+  <h2>Want to know more?</h2>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">About us</button>
+  <div id="demo" class="collapse">
+   <p id="bob">Cold Storage is a Singaporean multinational supermarket company currently owned by DFI Retail Group. Its parent company also operates Market Place stores, now branded as Cold Storage Fresh, as well as the Giant hypermarket brand, and has various other supermarkets around Asia including Hero and Wellcome.</p>
+  </div>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Company background</button>
+  <div id="demo2" class="collapse">
+    <p id="bob">Born in Singapore in 1903, we started out as a homegrown merchant of fresh, quality meats and dairy products. From a small cold store to a popular household name and Singaporean icon, we introduced numerous innovative retail concepts including the first supermarket in the 1960s, multiple retailing and bulk buying to bring greater savings to our customers. Cold Storage is also a pioneer in bringing quality and exclusive products from around the world to the well-travelled and the residents of Singapore.</p>
+  </div>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Social Media</button>
+  <div id="demo3" class="collapse">
+    <p id="bob">Instagram: <a href="https://www.instagram.com/coldstoragesg/" class="fa fa-instagram" target="_blank"></a> 
+	Youtube: <a href="https://www.youtube.com/channel/UCSjKnwdfRFumraG7tIp7Vpw" class="fa fa-youtube" target="_blank"></a>
+	Telegram: <a href="https://t.me/coldstoragesg" class="fa fa-telegram" target="_blank"></a>
+	Facebook: <a href="https://www.facebook.com/sg.coldstorage" class="fa fa-facebook" target="_blank"></a></p>
+  </div>
+</div>
+</div>
+</body>
+</html>
